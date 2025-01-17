@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
-import { Menu, Music, Home, ChefHat, Calendar as CalendarIcon, ArrowRight, MapPin, Utensils, Theater, Wine, BookOpen, Newspaper, ChevronRight, ChevronLeft, X, Users, Share2, Phone, Mail, Clock, Facebook, Instagram, Send, Filter } from 'lucide-react';
+import { Menu, Home, Calendar as CalendarIcon, Utensils, Wine, Newspaper, ChevronRight, MapPin } from 'lucide-react';
 
 // Lazy load pages
 const HomePage = React.lazy(() => import('./pages/Home'));
@@ -14,8 +14,8 @@ const VinosPage = React.lazy(() => import('./pages/gastronomia/vinos'));
 
 interface SubMenuItem {
   label: string;
-  href: string;
-  to?: string;
+  to: string;
+  href?: string;
   icon?: React.ReactNode;
   description?: string;
   image?: string;
